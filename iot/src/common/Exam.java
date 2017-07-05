@@ -52,10 +52,10 @@ public class Exam {
 			String sql = "insert into user(id,pwd,name,age,class_num)values(?,?,?,?,?)";
 			PreparedStatement prestmt = con.prepareStatement(sql);
 			prestmt.setString(1, hm.get("id"));
-			prestmt.setString(1, hm.get("pwd"));
-			prestmt.setString(1, hm.get("name"));
-			prestmt.setString(1, hm.get("age"));
-			prestmt.setString(1, hm.get("class_num"));
+			prestmt.setString(2, hm.get("pwd"));
+			prestmt.setString(3, hm.get("name"));
+			prestmt.setString(4, hm.get("age"));
+			prestmt.setString(5, hm.get("class_num"));
 			int result = prestmt.executeUpdate();
 			DBConn2.closeCon();
 			if (result == 1) {
