@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+
+
+function makeSureForm(){
+	var nameObj=document.getElementById("name");
+	var passObj=document.getElementById("pass");
+	var colorObj=document.getElementById("s_color");
+	var dateObj=document.getElementById("s_date");
+	var emailObj=document.getElementById("t_email");
+	var radioObj=document.getElementById("s_radio");
+	var checkboxObj=document.getElementById("ch");
+	var resetObj=document.getElementById("r_btn");
+	var reset2Obj=document.getElementById("s_btnr");
+	
+	alert(nameObj.value);
+	alert(passObj.value);
+	alert(colorObj.value);
+	alert(dateObj.value);
+	alert(emailObj.value);
+	alert(radioObj.value);
+	alert(checkboxObj.value);
+	alert(resetObj.value);
+	alert(reset2Obj.value);
+}
+function changecolor(){
+	var colorObj=document.getElementById("s_color");
+	var nameObj=document.getElementById("name");
+	var passObj=document.getElementById("pass");
+	var colorObj=document.getElementById("s_color");
+	var dateObj=document.getElementById("s_date");
+	var emailObj=document.getElementById("t_email");
+	var radioObj=document.getElementById("s_radio");
+	var checkboxObj=document.getElementById("ch");
+	var resetObj=document.getElementById("r_btn");
+	var reset2Obj=document.getElementById("s_btn");
+	
+	nameObj.style="color:"+colorObj.value;
+	passObj.style="color:"+colorObj.value;
+	colorObj.style="color:"+colorObj.value;
+	dateObj.style="color:"+colorObj.value;
+	emailObj.style="color:"+colorObj.value;
+	radioObj.style="color:"+colorObj.value;
+	checkboxObj.style="color:"+colorObj.value;
+	resetObj.style="color:"+colorObj.value;
+	reset2Obj.style="color:"+colorObj.value;
+}
+</script>
+<body>
+<form id="test_form"method="get"action="/table.user">
+이름:<input type="text" id="name"name="name"/><br/>
+비밀번호:<input type="password"id="pass" name="pass"/><br/>
+텍스트:<input type="color"id="s_color"name="s_color"onchange="changecolor()"/><br/>
+일자:<input type="date"id="s_date"name="s_date"/><br/>
+이메일:<input type="email"id="t_email"name="t_email"/><br/>
+라디오:<input type="radio"id="s_radio"name="s_radio"/><br/>
+체크박스:<input type="checkbox"id="ch"name="ch"/><br/>
+리셋:<input type="reset"id="r_btn"name="r_btn"/><br/>
+전송:<input type="reset"id="s_btn"name="s_btn"/><br/>
+<input type="button"value="확인"onclick="makeSureForm()"/>
+<input type="submit"value="전송" />
+</form>
+</body>
+</html>
