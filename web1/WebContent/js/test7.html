@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function createTable(){
+	var createNum= document.getElementById("id1").value;
+	var divObj=document.getElementById("r_div");
+	var str = "";
+	for(var i=0;i<createNum;i++){
+		str += "<input = 'text' id = 'id"+(i+3)+"' name ='txt'/>"
+	}
+	divObj.innerHTML=str;	
+}
+function searchValue(){
+	var str=document.getElementById("searchValue").value;
+	var elObjs = document.getElementsByName("txt");
+	for(var i = 0 ; i<elObjs.length; i++){
+		var targetValue = elObjs[i].value;
+		if(targetValue.indexOf(str)!=-1){
+			alert("찾았다!!");
+			elObjs[i].focus();
+			elObjs[i].value="찾았다!!"
+	}
+	}
+}
+</script>
+<body>
+<input type = "text" id = "id1" name = "id1"/>
+<input type = "button"	value = "생성" onclick="createTable()"/>
+<div id = "r_div"></div>
+<input type = "text" id = "searchValue"	 name = "searchValue"/>
+<input type = "button" value = "값찾기" onclick="searchValue()"/>
+</body>
+</html>

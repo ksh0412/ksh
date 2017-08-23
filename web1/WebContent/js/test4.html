@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function makeThing(eObj){
+	var fObj = eObj.form;
+	var divObj=document.getElementById("r_div");
+	if(isNaN(fObj.elements[0].value)){
+		alert("숫자만입력하세요");
+		fObj.elements[0].value="";
+		fObj.elements[0].focus();
+	}
+	for(var i=0;i<fObj.elements[0].value;i++){
+	var inputStr="<input type='text' id='mk"+i+"' />";
+	alert(i);
+	divObj.innerHTML+=inputStr;
+}
+	alert(fObj.elements[4].id);
+}
+
+</script>
+<body>
+<form onsubmit ="form(this)" action = "test4.html">
+생성갯수:<input type="text" name="makeNum"/>
+<input type="button" value="생성"onclick="makeThing(this)"/>
+<div id="r_div"></div>
+</form>
+</body>
+</html>

@@ -29,6 +29,38 @@
     <servlet-name>CalServlet</servlet-name>
     <url-pattern>*.cal</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>GoodsServlet</servlet-name>
+    <servlet-class>com.test.servlet.GoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>*.goods</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>VendorServlet</servlet-name>
+    <servlet-class>com.test.servlet.VendorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VendorServlet</servlet-name>
+    <url-pattern>*.vendor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TestPageServlet</servlet-name>
+    <servlet-class>com.test.servlet.TestPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestPageServlet</servlet-name>
+    <url-pattern>*.testpage</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>FormTest</servlet-name>
+    <servlet-class>com.test.servlet.test.FormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormTest</servlet-name>
+    <url-pattern>*.formtest</url-pattern>
+  </servlet-mapping>
   
   <filter>
   <filter-name>Set Character Encoding</filter-name>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function makeInput(){
+	var inputNum=document.getElementById("cnt");
+	var divObj=document.getElementById("r_div");
+	var str="";
+	var checkNum = new Number(inputNum.value);
+	if(isNaN(checkNum)){
+		alert("숫자입력해");
+	}
+	for(var i=0;i<checkNum;i++){
+	str+="<input type='text'id='cnt"+(i+1)+"'/>";
+	}
+	divObj.innerHTML=str;
+}
+</script>
+<body>
+생성갯수:<input type="text"id="cnt"/><input type="button" value= "생성" onclick="makeInput()"/>
+<div id="r_div"></div>
+</body>
+</html>
