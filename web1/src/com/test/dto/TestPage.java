@@ -32,7 +32,7 @@ public class TestPage {
 		startBlock = (nowPageCnt-1)/10+1;
 		endBlock = getStartBlock() + blockCnt -1;
 		System.out.println("startBlock"+startBlock);
-	}
+	} 
 	
 	public int getEndBlock() {
 		return endBlock;
